@@ -1,0 +1,48 @@
+{
+  "openrpc": "1.2.6",
+  "info": {
+    "title": "LeaveManager MCP Server",
+    "version": "1.0.0",
+    "description": "JSON-RPC specification for MCP server exposing tools and resources."
+  },
+  "methods": [
+    {
+      "name": "poet",
+      "description": "Poem generator",
+      "params": [
+        { "name": "theme", "schema": { "type": "string" } }
+      ],
+      "result": { "name": "output", "schema": { "type": "string" } }
+    },
+    {
+      "name": "fetch_weather",
+      "description": "Fetch current weather for a city",
+      "params": [
+        { "name": "city", "schema": { "type": "string" } }
+      ],
+      "result": { "name": "output", "schema": { "type": "string" } }
+    },
+    {
+      "name": "get_leave_history",
+      "description": "Get leave history for the student",
+      "params": [
+        { "name": "student_id", "schema": { "type": "string" } }
+      ],
+      "result": { "name": "output", "schema": { "type": "string" } }
+    },
+    {
+      "name": "get_greeting",
+      "description": "Get a personalized greeting",
+      "params": [
+        { "name": "name", "schema": { "type": "string" } }
+      ],
+      "result": { "name": "output", "schema": { "type": "string" } }
+    },
+    {
+      "name": "get_pdf",
+      "description": "Return the contents of the Generative_AI_1705404080.pdf file as bytes.",
+      "params": [],
+      "result": { "name": "output", "schema": { "type": "string", "contentEncoding": "base64" } }
+    }
+  ]
+}

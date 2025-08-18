@@ -1,0 +1,4 @@
+httpx
+mcp[cli]
+psutil
+pydantic-ai
