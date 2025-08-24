@@ -21,7 +21,7 @@ COPY . /app
 # Install Python dependencies and uv
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir uv && \
-    pip install --no-cache-dir -r requirements.txt || pip install --no-cache-dir -r pyproject.toml
+    pip install --no-cache-dir -r requirements.txt
 
 # Expose port (if using HTTP transport)
 EXPOSE 8000

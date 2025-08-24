@@ -9,4 +9,5 @@ dependencies = [
     "mcp[cli]>=1.12.4",
     "psutil>=7.0.0",
     "pydantic-ai>=0.7.1",
+    "langchain-openai>=0.3.30"
 ]
