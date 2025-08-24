@@ -1,0 +1,18 @@
+#!/bin/bash
+# Activate virtual environment
+# python -m venv .venv
+source /app/venv/bin/activate
+
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install transformers
+
+# Install Python dependencies
+echo "Installing Python dependencies..."
+if [ -f "requirements.txt" ]; then
+    pip install -r requirements.txt
+else
+    echo "Warning: requirements.txt not found"
+fi
+export HF_HUB_ENABLE_HF_TRANSFER=0
+# echo "Starting Green MCP Server..."
+exec python /app/server/green-mcp-server.py
